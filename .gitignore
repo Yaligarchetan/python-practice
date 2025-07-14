@@ -1,0 +1,8 @@
+# Ignore virtual environment folder
+.venv/ 
+
+# Environment variables file
+.env
+
+# VS Code settings folder
+.vscode/
