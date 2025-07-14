@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # Load data
-file_path = r"C:\Users\1041924\Downloads\Sample - Superstore.xls"
+file_path = r"C:\your\file\path of datasets[i used superstore datasets from kaggle]"
 data = pd.read_excel(file_path, engine='xlrd')
 
 # Convert date columns if needed
