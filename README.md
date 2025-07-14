@@ -16,7 +16,6 @@ This repository contains Python scripts, exercises, and notes designed to help l
 ### Installation
 Clone the repository:
 ```bash
-git clone https://github.com/yourusername/python-learning-project.git
-cd python-learning-project
-
+git clone https://github.com/Yaligarchetan/python-practice.git
+cd python-practice
 
