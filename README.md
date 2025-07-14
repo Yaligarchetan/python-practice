@@ -4,8 +4,9 @@
 This repository contains Python scripts, exercises, and notes designed to help learn and practice Python programming. It is aimed at beginners or anyone looking to strengthen their Python skills.
 
 ## Contents
-- basics
+- datatypes/oops in python
 - numpy and pandas
+- Data visualization modules
 
 ## Getting Started
 
