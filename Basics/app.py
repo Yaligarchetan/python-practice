@@ -85,6 +85,52 @@ account.withdraw(10000)
 print(f'current balance: {account.get_balance()}')  # ✅ OK
 #print(account.__balance)  # ❌ Error: __balance is private and cannot be accessed directly
 '''
+#3. Polymorphism example
+# This code demonstrates polymorphism in Python
+class Animal:
+    def speak(self):
+        print("Some generic animal sound")
+
+class Dog(Animal):
+    def speak(self):
+        print("Woof!")
+
+class Cat(Animal):
+    def speak(self):
+        print("Meow!")
+
+animals = [Dog(), Cat(), Animal()]
+for animal in animals:
+    animal.speak()
 
 
+# 4. Encapsulation example
+# This code demonstrates encapsulation in Python
+# Encapsulation is the bundling of data and methods that operate on that data within a single unit (class).
+class Car:  
+    def __init__(self, make, model):
+        self.__make = make  # private variable
+        self.__model = model  # private variable
+
+    def get_info(self):
+        return f"{self.__make} {self.__model}"
+
+    def set_make(self, make):
+        self.__make = make
+
+    def set_model(self, model):
+        self.__model = model    
+
+
+# Example usage 
+# Creating an object of the Car class
+my_car = Car("Toyota", "Corolla")
+# Accessing the car's information
+print(my_car.get_info())  # Output: Toyota Corolla
+# Modifying the car's make and model
+# my_car.set_make("Honda")
+# my_car.set_model("Civic")
+# Accessing the updated car's information
+# print(my_car.get_info())  # Output: Honda Civic
+    
 
