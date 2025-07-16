@@ -1,71 +1,89 @@
-#python basics
-#This is a simple Python script demonstrating variable declarations
+# ========================================
+# Python Basics & Object-Oriented Concepts
+# ========================================
 
-name = "Alice"         # string
-age = 25               # integer
-height = 5.7           # float
-is_student = True      # boolean
+# -----------------------------
+# Variable Declarations & Types
+# -----------------------------
+name = "Alice"         # String
+age = 25               # Integer
+height = 5.7           # Float
+is_student = True      # Boolean
 
+# -----------------
+# Commented Example
+# -----------------
 '''
 print("Hello, World!")
 user_name = input("Enter your name: ")
 print("Hi", user_name)
 '''
 
-# Data Types in Python
-'''
+# ------------------------
+# Built-in Data Structures
+# ------------------------
+
 # List
 fruits = ["apple", "banana", "cherry"]
-print(fruits[0])  # apple
+# print(fruits[0])  # Output: apple
 
 # Tuple (immutable)
 colors = ("red", "green", "blue")
 
 # Dictionary (key-value pairs)
 person = {"name": "Bob", "age": 30}
-print(person["name"])  # Bob
+# print(person["name"])  # Output: Bob
 
 # Set (unique items)
 unique_numbers = {1, 2, 3, 3, 2}
-print(unique_numbers)  # {1, 2, 3}
-'''
-# looping in python
-'''
+# print(unique_numbers)  # Output: {1, 2, 3}
+
+# ---------------
+# Looping in Python
+# ---------------
+
 # For loop
+'''
 fruits = ["apple", "banana", "cherry"]
 for fruit in fruits:
     print(fruit)
-
-    
+'''
 
 # While loop
+'''
 count = 0
 while count < 5:
     print(count)
     count += 1
 '''
-#OOPS in Python
- # 1. Class and Object
+
+# ====================
+# Object-Oriented Python
+# ====================
+
+# -----------------
+# 1. Class and Object
+# -----------------
 '''
 class Person:
-    def __init__(self, name, age):  # constructor
-        self.name = name            # instance variable
+    def __init__(self, name, age):
+        self.name = name
         self.age = age
 
-    def greet(self):                # method
+    def greet(self):
         print(f"Hi, I'm {self.name} and I'm {self.age} years old.")
 
-# Creating an object
-p1 = Person("chetan", 23)
+p1 = Person("Chetan", 23)
 p1.greet()
 '''
 
-# 2. Inheritance
-#Use _ (protected) and __ (private) to hide data.
+# ----------------
+# 2. Inheritance & Data Hiding
+# ----------------
 '''
 class BankAccount:
     def __init__(self, balance):
-        self.__balance = balance  # private variable
+        self.__balance = balance  # Private variable
 
     def deposit(self, amount):
         self.__balance += amount
@@ -74,7 +92,7 @@ class BankAccount:
         if amount <= self.__balance:
             self.__balance -= amount
         else:
-            print("Insufficient funds")    
+            print("Insufficient funds")
 
     def get_balance(self):
         return self.__balance
@@ -82,11 +100,14 @@ class BankAccount:
 account = BankAccount(1000)
 account.deposit(500)
 account.withdraw(10000)
-print(f'current balance: {account.get_balance()}')  # ✅ OK
-#print(account.__balance)  # ❌ Error: __balance is private and cannot be accessed directly
+print(f'Current balance: {account.get_balance()}')
+# print(account.__balance)  # ❌ Error: Cannot access private attribute
 '''
-#3. Polymorphism example
-# This code demonstrates polymorphism in Python
+
+# ----------------
+# 3. Polymorphism
+# ----------------
+
 class Animal:
     def speak(self):
         print("Some generic animal sound")
@@ -103,14 +124,14 @@ animals = [Dog(), Cat(), Animal()]
 for animal in animals:
     animal.speak()
 
+# ----------------
+# 4. Encapsulation
+# ----------------
 
-# 4. Encapsulation example
-# This code demonstrates encapsulation in Python
-# Encapsulation is the bundling of data and methods that operate on that data within a single unit (class).
-class Car:  
+class Car:
     def __init__(self, make, model):
-        self.__make = make  # private variable
-        self.__model = model  # private variable
+        self.__make = make    # Private attribute
+        self.__model = model  # Private attribute
 
     def get_info(self):
         return f"{self.__make} {self.__model}"
@@ -119,18 +140,13 @@ class Car:
         self.__make = make
 
     def set_model(self, model):
-        self.__model = model    
+        self.__model = model
 
-
-# Example usage 
-# Creating an object of the Car class
+# Example usage
 my_car = Car("Toyota", "Corolla")
-# Accessing the car's information
 print(my_car.get_info())  # Output: Toyota Corolla
-# Modifying the car's make and model
+
+# Uncomment to update details
 # my_car.set_make("Honda")
 # my_car.set_model("Civic")
-# Accessing the updated car's information
 # print(my_car.get_info())  # Output: Honda Civic
-    
-
