@@ -7,6 +7,8 @@ This repository contains Python scripts, exercises, and notes designed to help l
 - Datatypes/oops in python
 - numpy and pandas examples
 - Data visualization modules
+- Learning basics github actions
+- Adding github Actions/workflow(ex - i have added pylint config yaml file to check linting in my .py files )
 
 ## Getting Started
 
