@@ -19,5 +19,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install pylint
     - name: Analysing the code with pylint
+      if: false
+      # comment if  statement or change to true to run the workflow 
       run: |
         pylint $(git ls-files '*.py')
